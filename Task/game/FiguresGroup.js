@@ -8,7 +8,7 @@ var FiguresGroup = function FiguresGroup(figures_limit_length) {
  * @param figure
  */
 FiguresGroup.prototype.add = function (figure) {
-    //...
+    this._figures.push(figure);
 };
 
 /**
@@ -16,14 +16,14 @@ FiguresGroup.prototype.add = function (figure) {
  * @returns {Figure[]} figures
  */
 FiguresGroup.prototype.getFigures = function () {
-    //...
+    return this._figures;
 };
 
 /**
  * @description Удаляет все фигуры с поля
  */
 FiguresGroup.prototype.clear = function () {
-    //...
+    this._figures = [];
 };
 
 /**
@@ -31,5 +31,5 @@ FiguresGroup.prototype.clear = function () {
  * @param {Figure} figure
  */
 FiguresGroup.prototype.remove = function (figureID) {
-    //...
+    this._figures.splice(figureID, 1);
 };
